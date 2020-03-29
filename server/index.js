@@ -16,11 +16,11 @@ app.get('/api/greeting', (req, res) => {
   res.send(JSON.stringify({ greeting: `Hello ${name}!` }));
 });
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname+'/build/index.html'));
+   res.sendFile(path.resolve(__dirname, '../build/index.html',));
 });
 
 app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/build/index.html'));
+    res.sendFile(path.j(__dirname+'/build/index.html'));
 });
 
 
